@@ -1,0 +1,510 @@
+<?php
+include('front.config.inc.php'); 
+
+if(isset($_POST) && sizeof($_POST) > 0 )
+{
+	$success_insert = false;
+	
+	$pmbname = trim($_POST['pmbname']);
+	$pmbnik = trim($_POST['pmbnik']);
+	$pmbjkel = trim($_POST['pmbjkel']);
+	$pmbbirth = trim($_POST['pmbbirth']);
+	$pmbplace = trim($_POST['pmbplace']);
+	$pmbagama = trim($_POST['pmbagama']);
+	$pmbstatusnikah = trim($_POST['pmbstatusnikah']);
+	$pmbaddress = trim($_POST['pmbaddress']);
+	$pmbhp = trim($_POST['pmbhp']);
+	$pmbemail = trim($_POST['pmbemail']);
+	$pmbphoto = trim($_POST['pmbphoto']);
+	$pmblulusan = trim($_POST['pmblulusan']);
+	$pmbgraduateyear = trim($_POST['pmbgraduateyear']);
+	$pmbdadyname = trim($_POST['pmbdadyname']);
+	$pmbparentaddress = trim($_POST['pmbparentaddress']);
+	$pmbparenthp = trim($_POST['pmbparenthp']);
+	$pmbdadylaststudy = trim($_POST['pmbdadylaststudy']);
+	$pmbdadyjob = trim($_POST['pmbdadyjob']);
+	$pmbknowwe = trim($_POST['pmbknowwe']);
+	$pmbacademicscore = trim($_POST['pmbacademicscore']);
+	$pmbenglishscore = trim($_POST['pmbenglishscore']);
+	$status = trim($_POST['status']);
+	$ip = trim($_SERVER['REMOTE_ADDR']); 
+	
+	$err_msg = '';
+	
+	if ($pmbname == '') { $err_msg .= 'Name must be filled<br />';/* //$lang['pmb']['error']['nama_kosong']; */ }
+    elseif (!ereg("^[[:alpha:]]([[:alpha:]]|[[:space:]]|[.]+)+$",$pmbname)) { $err_msg .= 'Name tidak valid';/* //$lang['pmb']['error']['nama_invalid'];  */}
+    if ($pmbnik == '') { $err_msg .= 'NIK must be filled<br />';/* //$lang['pmb']['error']['nik']; */ }
+    if ($pmbplace == '') { $err_msg .= 'Place of Birth must be filled<br />'; }
+    if ($pmbbirth == '') { $err_msg .= 'Date of Birth must be filled<br />';/* //$lang['pmb']['error']['tanggal_lahir']; */ }
+    if ($pmbjkel == '') { $err_msg .= 'Jenis kelamin must be filled<br />';/* //$lang['pmb']['error']['jenis_kelamin']; */ }
+    if ($pmbagama == '') { $err_msg .= 'Religian must be filled<br />';/* //$lang['pmb']['error']['agama']; */ }
+    if ($pmbstatusnikah == '') { $err_msg .= 'Status Pernikahan harus dipilih<br />';/* //"Semua isian must be filled"; */ }
+    if ($pmbaddress == '') { $err_msg .= 'Address must be filled<br />';/* $lang['pmb']['error']['alamat']; */ }
+    /*if ($pmbpostcode == '') { $error['pmbpostcode'] = 'Kode pos must be filled<br />';}*/ /* $lang['pmb']['error']['kodepos']; */
+    /*if ($input_telp == '') { $msg .= $lang['pmb']['error']['telp']; }*/
+    if ($pmbhp == '') { $err_msg .=  'No Handphone must be filled<br />';/* $lang['pmb']['error']['hp']; */ }
+    if ($pmbemail == '') { $err_msg .= 'Email must be filled<br />';/* $lang['pmb']['error']['email']; */ }
+    elseif ( !filter_var($pmbemail, FILTER_VALIDATE_EMAIL) ) { $err_msg .= 'Email tidak valid<br />';/* $msg .= $lang['pmb']['error']['email_invalid']; */ }
+    if ($pmbacademicscore == '') { $err_msg .= "Average Academic Score must be filled<br />"; }
+    if ($pmbenglishscore == '') { $err_msg .= "Average English Score must be filled<br />"; }
+    if ($pmbknowwe == '') { $err_msg .= "Sumber Informasi harus dipilih<br />"; }
+    if ($pmblulusan == '') { $err_msg .= 'High School Name must be filled<br />';/* $lang['pmb']['error']['tahun_lulus']; */ }
+	
+    $data_pmbphoto 				= $_FILES["data_pmbphoto"];
+	$old_pmbphotoname 			= trim($_POST["old_pmbphotoname"]);
+	if ($data_pmbphoto['name'] == "" && $old_pmbphotoname == ""  ) { $msg.="Silakan unggah file CV<br>";}
+	
+	if( isset($data_pmbphoto["name"]) && $data_pmbphoto['name'] !='')
+	{
+	   	$handle                     = new Upload($data_pmbphoto);
+	    $handle->allowed            = array('application/pdf', 'image/jpeg', 'image/png'); 
+	    if ($handle->uploaded) { 
+	        $handle->Process("./upload/module/pmb/");
+	        if ($handle->processed) {
+	            
+	            $pmbphotoname     = $handle->file_dst_name;
+	            
+	            
+	        } else {
+	            
+	            $msg .= 'TOEFL or IELTS : '.$handle->error;
+	            $handle->clean();
+	        } 
+	        $handle->clean();
+	    } else { 
+	        $msg .= 'TOEFL or IELTS : '.$handle->error;
+	    }
+	}else
+	{
+	  $pmbphotoname = isset($old_pmbphotoname) ? $old_pmbphotoname : '';
+	}
+	if (!( $_SESSION['security_code'] == $_POST['security_code'] && !empty($_SESSION['security_code'] ) )) {
+		$err_msg .=  "Invalid capthca<br>";
+	} 
+							      
+    if(empty($err_msg))
+    { 
+	    $sql = 'INSERT INTO rgs SET 
+		pmbname= '.$db->qstr($pmbname).',
+		pmbnik= '.$db->qstr($pmbnik).',
+		pmbjkel= '.$db->qstr($pmbjkel).',
+		pmbbirth= '.$db->qstr($pmbbirth).',
+		pmbplace= '.$db->qstr($pmbplace).',
+		pmbagama= '.$db->qstr($pmbagama).',
+		pmbstatusnikah= '.$db->qstr($pmbstatusnikah).',
+		pmbaddress= '.$db->qstr($pmbaddress).',
+		pmbhp= '.$db->qstr($pmbhp).',
+		pmbemail= '.$db->qstr($pmbemail).',
+		pmbphoto= '.$db->qstr($pmbphotoname).',
+		pmblulusan= '.$db->qstr($pmblulusan).',
+		pmbgraduateyear= '.$db->qstr($pmbgraduateyear).',
+		pmbdadyname= '.$db->qstr($pmbdadyname).',
+		pmbparentaddress= '.$db->qstr($pmbparentaddress).',
+		pmbparenthp= '.$db->qstr($pmbparenthp).',
+		pmbdadylaststudy= '.$db->qstr($pmbdadylaststudy).',
+		pmbdadyjob= '.$db->qstr($pmbdadyjob).',
+		pmbknowwe= '.$db->qstr($pmbknowwe).',
+		pmbacademicscore= '.$db->qstr($pmbacademicscore).',
+		pmbenglishscore= '.$db->qstr($pmbenglishscore).',
+		status= '.$db->qstr('Mendaftar').',
+		ip= '.$db->qstr($ip).' 
+		';
+		if($db->Execute($sql))
+		{
+			$success_insert = true;
+		}
+		else
+		{
+			echo $sql;
+		}
+		
+		
+
+    }
+     
+}
+
+
+?><!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Universitas Pembangunan Jaya" /> 
+<meta name="copyright" content="upj.ac.id" /> 
+<meta name="creator" content="Universitas Pembangunan Jaya" />
+    <meta name="description" content="UPJ hadir untuk menciptakan sarjana yang mampu mengatasi segala bentuk tantangan dalam masyarakat dan giat berperan serta menyumbangkan pemikiran ke lingkungan " /> 
+    <meta name="keywords" content="Universitas Pembangunan Jaya di Bintaro tangerang" />
+<link rel="icon" type="image/png" href="images/favicon.png">
+<!-- Document title -->
+<title>IUP Registration Online | Universitas Pembangunan Jaya</title>
+<!-- Stylesheets & Fonts -->
+<link href="css/plugins.css" rel="stylesheet">
+<link href="css/master.css" el="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<!-- Bootstrap datetimepicker css -->
+<link href="plugins/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="body-inner">
+         <!-- Header -->
+         <?php include ("header.php")?>
+         <!--  Header -->
+
+         <!-- Breadcumb -->
+         <section id="page-title" class="text-light" style="background-image:url(images/UPJIUP.png); ">
+            <div class="container">
+            </div>
+        </section>
+        <section class="p-0">
+            <div class="container">
+                <div class="row">
+                    <div class="breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li><a href="index.php"><i class="fa fa-home"></i></a> </li>
+                                <li class="breadcrumb-item active" aria-current="page">IUP Registration Online</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcumb -->   
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                       <h2>IUP Registration Online</h2>
+                       <?php
+                       if($success_insert == true)
+                       {
+	                       echo '<div class="alert alert-success" role="alert">
+								  Thank you, we have received your data.
+								</div>';
+                       }
+                       else
+                       {
+	                       if(!empty($err_msg))
+	                       {
+		                       echo '<div class="alert alert-warning" role="alert">
+								  '.$err_msg.' 
+								</div>';
+	                       }
+	                       
+	                       ?>
+	                       <form class="form" method="post" enctype="multipart/form-data" >
+	                            <div class="card"> 
+	                                <div class="card-body">
+	                                    <div class="row">
+	                                        <div class="col-md-12">
+	                                            <div class="form-group">
+	                                                <label>Name (Base on Birth Certificate) *</label>
+	                                                <input type="text" name="pmbname" value="<?php echo $pmbname; ?>" class="form-control" Placeholder="Please input full name">
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Place of Birth  *</label>
+	                                                <input type="text" name="pmbplace" value="<?php echo $pmbplace; ?>" class="form-control" Placeholder="Please input place of birth"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Date of Birth *</label>
+	                                                <div class="input-group date" id="date" data-target-input="nearest">
+	                                                    <input type="text" name="pmbbirth" value="<?php echo $pmbbirth; ?>" class="form-control datetimepicker-input" data-target="#date" Placeholder="Please input date of birth" />
+	                                                    <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
+	                                                        <div class="input-group-text"><i class="icon-calendar"></i></div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Identity Number (Identity Number of Family Card)  *</label>
+	                                                <input type="text" name="pmbnik" value="<?php echo $pmbnik; ?>" class="form-control" placeholder="Please input identity number"> 
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-12">
+	                                            <div class="form-group">
+	                                                <label>Address *</label>
+	                                                <textarea type="text" rows="3" name="pmbaddress" class="form-control" placeholder="Please input address"><?php echo $pmbaddress; ?></textarea>
+	                                                    
+	                                            </div>
+	                                        </div>
+	                                        
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-12">
+	                                            <div class="form-group">
+	                                                <label>Phone Number *</label>
+	                                                <input type="text"  class="form-control" name="pmbhp" value="<?php echo $pmbhp; ?>" id="phone"  autocomplete="off" data-intl-tel-input-id="0" placeholder="Please input phune number">
+	                                                    
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Email Address *</label>
+	                                                <input type="text" name="pmbemail" value="<?php echo $pmbemail; ?>" class="form-control" placeholder="Please input email address"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Status *</label>
+	                                                <select   name="pmbstatusnikah" class="form-control" placeholder="Please input Status"> 
+	                                                    <option value="">Choose</option>
+	                                                    <option <?php if($pmbstatusnikah == 'Single' ){ echo 'selected="selected" '; } ?> value="Single">Single</option>
+	                                                    <option <?php if($pmbstatusnikah == 'Married' ){ echo 'selected="selected" '; } ?> value="Married">Married</option>
+	                                                    <option <?php if($pmbstatusnikah == 'Widower' ){ echo 'selected="selected" '; } ?> value="Widower">Widower</option>
+	                                                </select>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="card"> 
+	                                <div class="card-header">School Background of Prospective Students Data</div>
+	                                <div class="card-body">
+	                                    <div class="row">
+	                                        <div class="col-md-8">
+	                                            <div class="form-group">
+	                                                <label>High School Name *</label>
+	                                                <input type="text" name="pmblulusan" value="<?php echo $pmblulusan; ?>"  class="form-control" placeholder="Please input high school name"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Graduation Year *</label>
+	                                                <div class="input-group date" id="datepicker" data-target-input="nearest">
+	                                                    <input type="text" name="pmbgraduateyear" value="<?php echo $pmbgraduateyear; ?>" class="form-control datetimepicker-input" data-target="#datepicker" placeholder="Select year" />
+	                                                    <div class="input-group-append" data-target="#datepicker" data-toggle="datetimepicker">
+	                                                        <div class="input-group-text"><i class="icon-calendar"></i></div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Gender *</label>
+	                                                <select name="pmbjkel"  class="form-control" placeholder="Please input Gender"> 
+	                                                    <option value="">Choose</option> 
+	                                                    <option <?php if($pmbjkel == 'Male' ){ echo 'selected="selected" '; } ?> value="Male">Male</option>
+	                                                    <option <?php if($pmbjkel == 'Female' ){ echo 'selected="selected" '; } ?> value="Female">Female</option>
+	                                                </select>
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Religion *</label>
+	                                                <select name="pmbagama"  class="form-control" placeholder="Please input Religion"> 
+	                                                    <option value="">Choose</option>
+	                                                    <option <?php if($pmbagama == 'Buddhist' ){ echo 'selected="selected" '; } ?> value="Buddhist">Buddhist</option>
+	                                                    <option <?php if($pmbagama == 'Catholic' ){ echo 'selected="selected" '; } ?> value="Catholic">Catholic</option>
+	                                                    <option <?php if($pmbagama == 'Hindu' ){ echo 'selected="selected" '; } ?> value="Hindu">Hindu</option>
+	                                                    <option <?php if($pmbagama == 'Islam' ){ echo 'selected="selected" '; } ?> value="Islam">Islam</option>
+	                                                    <option <?php if($pmbagama == 'Protestant' ){ echo 'selected="selected" '; } ?> value="Protestant">Protestant</option>
+	                                                    <option <?php if($pmbagama == 'Others' ){ echo 'selected="selected" '; } ?> value="Others">Others</option>
+	                                                </select>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="card"> 
+	                                <div class="card-header">Parent Data (Father or Mother)</div>
+	                                <div class="card-body">
+	                                    <div class="row">
+	                                        <div class="col-md-8">
+	                                            <div class="form-group">
+	                                                <label>Name *</label>
+	                                                <input type="text" name="pmbdadyname" value="<?php echo $pmbdadyname; ?>"  class="form-control" placeholder="Please input high school name"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Phone Number *</label>
+	                                                <input type="tel" name="pmbparenthp" value="<?php echo $pmbparenthp; ?>"    class="form-control"  Placeholder="">
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-12">
+	                                            <div class="form-group">
+	                                                <label>Address *</label>
+	                                                <textarea  rows="3"  class="form-control" name="pmbparentaddress"  placeholder="Please input address"><?php echo $pmbparentaddress; ?></textarea>
+	                                                    
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-6">
+	                                            <div class="form-group">
+	                                                <label>Education Background *</label>
+	                                                <select  name="pmbdadylaststudy" class="form-control" placeholder="Please input high school name"> 
+	                                                    <option value="">Choose</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'A' ){ echo 'selected="selected" '; } ?> value="A">A - Tidak Tamat SD</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'B' ){ echo 'selected="selected" '; } ?> value="B">B - Tamat SD</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'C' ){ echo 'selected="selected" '; } ?> value="C">C - Tamat SMP</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'D' ){ echo 'selected="selected" '; } ?> value="D">D - Tamat SMA</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'E' ){ echo 'selected="selected" '; } ?> value="E">E - Diploma ( D1 - D2 )</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'F' ){ echo 'selected="selected" '; } ?> value="F">F - Sarjana ( D3 )</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'G' ){ echo 'selected="selected" '; } ?> value="G">G - Sarjana ( D4 - S1 )</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'H' ){ echo 'selected="selected" '; } ?> value="H">H - Pascasarjana ( S2 )</option>
+	                                                    <option <?php if($pmbdadylaststudy == 'I' ){ echo 'selected="selected" '; } ?> value="I">I - Doktor ( S3 )</option>
+	                                                </select>
+	                                                    
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-6">
+	                                            <div class="form-group">
+	                                                <label>Employment *</label>
+	                                                <select type="text" name="pmbdadyjob" class="form-control" placeholder="Please input high school name"> 
+	                                                    <option value="">Choose</option>
+	                                                    <option <?php if($pmbdadyjob == 'Pegawai Negeri' ){ echo 'selected="selected" '; } ?> value="Pegawai Negeri">Pegawai Negeri</option>
+	                                                    <option <?php if($pmbdadyjob == 'TNI/POLRI' ){ echo 'selected="selected" '; } ?> value="TNI/POLRI">TNI/POLRI</option>
+	                                                    <option <?php if($pmbdadyjob == 'Pegawai Swasta' ){ echo 'selected="selected" '; } ?> value="Pegawai Swasta">Pegawai Swasta</option>
+	                                                    <option <?php if($pmbdadyjob == 'Wiraswasta' ){ echo 'selected="selected" '; } ?> value="Wiraswasta">Wiraswasta</option>
+	                                                    <option <?php if($pmbdadyjob == 'Tidak Bekerja' ){ echo 'selected="selected" '; } ?> value="Tidak Bekerja">Tidak Bekerja</option>
+	                                                    <option <?php if($pmbdadyjob == 'Pensiun' ){ echo 'selected="selected" '; } ?> value="Pensiun">Pensiun</option>
+	                                                    <option <?php if($pmbdadyjob == 'Lainnya' ){ echo 'selected="selected" '; } ?> value="Lainnya">Lainnya</option>
+	                                                </select>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="card"> 
+	                                <div class="card-header">Requirement</div>
+	                                <div class="card-body">
+	                                    <div class="row">
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Average Academic Score *</label>
+	                                                <input type="text" name="pmbacademicscore" value="<?php echo $pmbacademicscore; ?>"  class="form-control" placeholder="Please input Academic Score"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Average English Score *</label>
+	                                                <input type="text" name="pmbenglishscore" value="<?php echo $pmbenglishscore; ?>"  class="form-control" placeholder="Please input english score"> 
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Upload TOEFL or IELTS Certification (optional) </label>
+	                                                <input type="file" accept="application/pdf, image/jpeg" name="data_pmbphoto" class=""  id="data_pmbphoto" placeholder="" style="color:black;"> 
+	                                                <?php
+	                                                    if(!empty($pmbphotoname) && is_file("./upload/module/pmb/".$pmbphotoname) )
+													  {
+														 echo  '<label for="formFile" class="form-label">
+											                        Accepted CV file:<a href="./upload/module/pmb/'.$pmbphotoname.'" target="_blank">'.$pmbphotoname.'</a> <input type="hidden" name="old_pmbphotoname" value="'.$pmbphotoname.'" />
+											                        </label>';
+														   
+													  }  else
+													  {
+														  echo '<label for="formFile" class="form-label">Format file PDF/JPG/PNG Max file 5MB</label>';
+													  }
+	                                                    
+	                                                    ?>
+								  
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-4">
+	                                            <div class="form-group">
+	                                                <label>Source Information about UPJ:  *</label>
+	                                               
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-lg-4"> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'Brochure or Flyer UPJ' ){ echo 'checked="checked" '; } ?> value="Brochure or Flyer UPJ" type="radio">&nbsp;&nbsp;Brochure or Flyer UPJ<br> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'E-mail Blast' ){ echo 'checked="checked" '; } ?> value="E-mail Blast" type="radio">&nbsp;&nbsp;E-mail Blast<br> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'Event Education Expo' ){ echo 'checked="checked" '; } ?> value="Event Education Expo" type="radio">&nbsp;&nbsp;Event Education Expo<br> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'Facebook' ){ echo 'checked="checked" '; } ?> value="Facebook" type="radio">&nbsp;&nbsp;Facebook<br> 
+	                                            
+	                                        </div>
+	                                        <div class="col-lg-4"> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'Instagram' ){ echo 'checked="checked" '; } ?> value="Instagram" type="radio">&nbsp;&nbsp; Instagram<br> 
+	                                            <input name="pmbknowwe" <?php if($pmbknowwe == 'School' ){ echo 'checked="checked" '; } ?> value="School" type="radio">&nbsp;&nbsp;School<br> 
+	                                           	<input name="pmbknowwe" <?php if($pmbknowwe == 'Family and Friends' ){ echo 'checked="checked" '; } ?> value="Family and Friends" type="radio">&nbsp;&nbsp;Family and Friends<br> 
+	                                       </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Captcha *</label>
+                                            <input type="text" name="security_code" value="" class="form-control" Placeholder="Please input full name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    	<label>&nbsp;</label>
+                                    	<img style="width: 100px; height: 40px;"  src="./CaptchaSecurityImages.php?width=100&height=40&characters=5" />
+                                    </div>
+                                </div>
+	                            <div class="row">
+	                                <div class="col-md-12">
+	                                    <button type="submit" class="btn btn-rounded btn-shadow btn-light-hoverbtn-reveal"><span>Submit</span><i class="icon-chevron-right"></i></button>
+	                                    <button type="button" class="btn btn-outline btn-shadow btn-light-hover btn-rounded">Reset</button>
+	                                </div>
+	                            </div>
+	                        </form>
+	                        <?php
+                        }
+                        ?>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+         <?php include ("footer.php")?>
+        <!--  Footer -->
+        </div>
+        
+        <!--  Body Inner -->
+        <!-- Scroll top -->
+        <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+        <!--Plugins-->
+        <script src="js/jquery.js"></script>
+        <script src="js/plugins.js"></script>
+        <!--Template functions-->
+        <script src="js/functions.js"></script>
+        <script src="plugins/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                $('#datepicker').datepicker({
+                    format: "yyyy",
+                    viewMode: "years", 
+                    minViewMode: "years"
+                });
+
+                $('#date').datepicker();
+
+                // $(function() {
+                // $('.selectpicker').selectpicker();
+                // });
+            });
+        </script>
+        
+</body>
+
+</html>

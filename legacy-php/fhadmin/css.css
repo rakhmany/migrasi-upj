@@ -1,0 +1,331 @@
+/*
+   Master CSS layout
+   Author by: Seto Andry Wibowo
+   FaberHost Indonesia
+   Mailto: andry@faberhost.co.id
+   @ 27 April 2006
+*/ 
+
+/* ===================== Unviersal Declaration =======================*/
+body {
+	font-family: Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	width : 100%;
+	font-size: 12px;
+	background:  #ececff; 
+}
+
+body, h1, h2, h3, h4, h5, h6, div,  table, td, th, tr, form {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, td {
+	font-family: Arial, Tahoma Verdana, Geneva, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4 { font-size: 12px; }
+h5 { font-size: 10px; }
+h6 { font-size: 8 px; }
+
+table {
+	border:0px;
+	border-collapse: collapse;
+	width : 100%;
+}
+td, tr { vertical-align: top; }
+
+a { text-decoration: none;  color: black;}
+a:hover { text-decoration: none; color: Black; font-weight: bold;}
+a:visited {	text-decoration: none;  color: Black;}
+
+img { border: 0px; }
+
+hr {
+    border-style: solid;
+	border-width: 1px;
+	height: 1px;
+}
+
+p {
+	margin: 0 0 0.8em 0;
+	padding: 0;
+	text-align: justify;
+}
+
+span, textarea  { vertical-align: top; }
+
+legend{
+	padding:5px 10px 5px 10px; 
+	background:black;
+	color : white;
+	font-weight: bold;
+}
+
+fieldset { background: #F8F8FF; }
+
+.bodyheader {
+	background-image: url(images/bgbanner.jpg);
+	background-repeat : repeat-x;
+}
+
+
+/* ========================= Default ============================*/
+.center { text-align: center;  }
+.right {  text-align: right; }
+.left {  text-align: leftt; }
+.top { vertical-align : top; }
+.middle { vertical-align : middle; }
+.bold {	 font-weight: bolder;}
+.italic{ font-style: italic; }
+.underline { text-decoration: underline; }
+
+
+/* ========================= Color ============================*/
+.black { color: black; }
+.grey { color: grey; }
+.red { color: red; }
+.dred { color: #8B0000; }
+.blue { color: blue; }
+.cyan { color: #0A6BCE; }
+.navy { color: navy; }
+.orange { color: #FF8C00; }
+.yellow { color: yellow; }
+.purple { color: purple; }
+.dolive { color: #556B2F; }
+.dolive2 { color: #CAFF70; }
+.dolive3 { color: #BCEE68; }
+.white {color: white; }
+.salmon1 { color: #8B5742; }
+.salmon2 { color: #FFA07A; }
+.salmon3 { color: #CD8162; }
+.greendark { color: #007D48; }
+.blues1 { color: #12127D; }
+.blues2 { color: #0066b3; }
+.blues3 { color: #80C9FF; }
+.redhot { color: #B30000; }
+.redhot2 { color: #E6300D; }
+.redhot3 { color: #FFBFBF; }
+
+
+/* ========================= BackgroundColor ============================*/
+.bgblack { background: black; }
+.bggrey { background: grey; }
+.bgred { background: red; }
+.bgdred { background: #8B0000; }
+.bgblue { background: blue; }
+.bgcyan { background: #0A6BCE; }
+.bgnavy { background: navy; }
+.bgorange { background: #FF8C00; }
+.bgyellow { background: yellow; }
+.bgpurple { background: purple; }
+.bgwhite {background: white; }
+.bgsalmon1 { background: #8B5742; }
+.bgsalmon2 { background: #FFA07A; }
+.bgsalmon3 { background: #CD8162; }
+.bgdolive { background: #556B2F; }
+.bgdolive2 { background: #CAFF70; }
+.bgdolive3 { background: #BCEE68; }
+.bggreendark { background: #007D48;}
+.bgblues1 { background: #12127D;}
+.bgblues2 { background: #0066b3; }
+.bgblues3 { background: #80C9FF; }
+.bgredhot { background: #B30000; }
+.bgredhot2 { background: #E6300D; }
+.bgredhot3 { background: #FFBFBF; }
+.bgviolet1 { background: #dfdfff; }
+.bgviolet2 { background: #f0f0ff; }
+.bgviolet3 { background: #ececff; }
+.bgwhite {	background:#ffffff; }
+
+.wdth10 { width: 10px; }
+.wdth20 { width: 20px; }
+.wdth30 { width: 30px; }
+.wdth40 { width: 40px; }
+.wdth50 { width: 50px; }
+.wdth60 { width: 60px; }
+.wdth70 { width: 70px; }
+.wdth80 { width: 80px; }
+.wdth90 { width: 90px; }
+.wdth100 { width: 100px; }
+.wdth110 { width: 110px; }
+.wdth120 { width: 120px; }
+.wdth130 { width: 130px; }
+.wdth140 { width: 140px; }
+.wdth150 { width: 150px; }
+.wdth160 { width: 160px; }
+.wdth170 { width: 170px; }
+.wdth180 { width: 180px; }
+.wdth190 { width: 190px; }
+.wdth200 { width: 200px; }
+.wdth210 { width: 210px; }
+.wdth220 { width: 220px; }
+.wdth230 { width: 230px; }
+.wdth240 { width: 240px; }
+.wdth250 { width: 250px; }
+.wdth260 { width: 260px; }
+.wdth270 { width: 270px; }
+.wdth280 { width: 280px; }
+.wdth290 { width: 290px; }
+.wdth300 { width: 300px; }
+.wdth310 { width: 310px; }
+.wdth320 { width: 320px; }
+.wdth330 { width: 330px; }
+.wdth340 { width: 340px; }
+.wdth350 { width: 350px; }
+.wdth360 { width: 360px; }
+.wdth370 { width: 370px; }
+.wdth380 { width: 380px; }
+.wdth390 { width: 390px; }
+.wdth400 { width: 400px; }
+.wdth410 { width: 410px; }
+.wdth420 { width: 420px; }
+.wdth430 { width: 430px; }
+.wdth440 { width: 440px; }
+.wdth450 { width: 450px; }
+.wdth460 { width: 460px; }
+.wdth470 { width: 470px; }
+.wdth480 { width: 480px; }
+.wdth490 { width: 490px; }
+.wdth500 { width: 500px; }
+
+
+/*=======================  Login Page  =========================*/
+#logincontainer {
+	width: 800px;
+	font-family: Arial, Verdana, "Times New Roman";
+	border: 1px solid #8282ff;
+	line-height: 150%;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;	
+	text-align: left;
+}
+
+
+#loginheader1,  #loginheader2 {
+	background-image: url(images/bgblock.jpg);
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-align: right;
+	padding: 5px 10px 5px 0px;
+}
+
+#loginheader1 {
+	float:left;
+}
+
+#loginfooter {
+	background-image: url(images/bgblock2.jpg);
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px 0px 3px 0px;
+	font-size:10px;
+}
+
+#logincontent {
+	width: 800px;
+	text-align:left;
+}
+
+
+/*==================== MENU =================*/
+#menucontent {
+	width : 210px;
+	padding : 10px 5px 10px 5px;
+}
+
+
+/*==================== content =================*/
+#worksheet {
+	width : 100%;
+	padding : 5px 10px 5px 10px;
+}
+
+#tabelform  { padding : 0px 5px 0px 5px;}
+#tabelform table { width : 100%;  }
+#tabelform td { 
+    padding : 5px 10px 0px 0px;
+	font-size: 12px;
+}
+
+
+#tabellist { padding : 0px 5px 0px 5px; }
+#tabellist table{
+  width : 100%;
+	border: 0.1px solid #666666;
+	//padding : 3px 3px 3px 3px;
+	border-collapse: separate;
+	border-spacing : 0px;
+	font-size: 10px;
+}
+#tabellist th {
+	border: 0.1px solid #666666;
+	background-image: url(images/bgblock.jpg);
+	color : White;
+	padding : 5px 10px 5px 10px;
+	font-size: 14px;
+}
+
+#tabellist td {
+	border: 0.1px solid #666666;
+	padding : 3px 5px 0px 5px;
+	font-size: 12px;
+}
+
+#tabellist img { 
+  vertical-align: middle; 
+  padding : 0px 3px 0px 3px;  
+}
+
+#tabelaksesright {
+  width:185px; 
+  float:left;
+}
+
+#tabelaksesclear {
+  width:100%; 
+  clear:left;
+}
+
+/*==================== paging ================== */
+
+#tabelpagingnormal, #tabelpaginonpage {
+	width : auto;
+	border : 1px solid black;
+	padding : 3px 5px 3px 5px;
+	float : left;
+	letter-spacing: 2px;
+	margin-right: 5px;	
+  font-weight: bold;
+}
+
+#tabelpagingnormal  {
+  background-color: white;
+	color: black;
+}
+
+#tabelpaginonpage {
+	background-color: black;
+	color: white;
+}
+
+#tabelpaging a  {
+	text-decoration: none;  
+	color: white; 
+	font-weight: bold;
+}
+
+/*********** Standard Header Search *********************/
+#header img, span, input, select  { vertical-align: middle; }
+#header {
+   margin: 0px; 
+   width : 100%;
+   padding : 10px 5px 10px 5px;
+}

@@ -1,0 +1,44 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.popup-overlay {
+  	display: flex;
+  	flex-direction: column;
+  	position: fixed;
+  	inset: 0;
+}
+
+
+:root {
+  	
+  	/* fonts */
+  	--font-poppins: Poppins;
+  	
+  	/* font sizes */
+  	--font-size-mini: 15px;
+  	--font-size-3xs: 10px;
+  	--font-size-xs: 12px;
+  	--font-size-base: 16px;
+  	--font-size-5xl: 24px;
+  	
+  	/* Colors */
+  	--background: #fff;
+  	--red: #e42427;
+  	--abu-pudar: #929292;
+  	--color-gray-100: #262324;
+  	--isi: #4b4b4b;
+  	--judul: #3b3b3b;
+  	--blue: #0082c6;
+  	--color-gainsboro-100: rgba(217, 217, 217, 0.5);
+  	
+  	/* Paddings */
+  	--padding-2xl: 21px;
+  	
+  	/* Border radiuses */
+  	--br-31xl: 50px;
+  	--br-20xl: 39px;
+  	
+}

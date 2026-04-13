@@ -1,0 +1,76 @@
+/* CSS Untuk Horizontal Menu 
+    Modified by : Seto Andry Wibowo
+    Tanggal : 1 Maret 2013
+    
+    Note : Tidak perlu dirubah, custome menu berdasar comment yang ada
+*/
+
+.faber_horizontal_menu {
+    font: bold 12px Verdana;
+    background: #414141;  /* Untuk Background Sisa Menu Utama */
+    width: 100%;
+}
+
+.faber_horizontal_menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.faber_horizontal_menu ul li{
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+.faber_horizontal_menu ul li a{
+    display: block;
+    background: #414141; /* Background Menu Utama */
+    padding: 8px 10px;  /* Jarak Padding di Menu Utama */
+    border-right: 1px solid #FFF;  /* Warna Border Pembatas Antar Menu Utama */
+    text-decoration: none;
+}
+
+* html .faber_horizontal_menu ul li a{ 
+    display: inline-block;
+}
+
+.faber_horizontal_menu ul li a:link, .faber_horizontal_menu ul li a:visited{
+    color: white;  /* Warna Font Default di dalam Menu baik Menu Utama maupun Sub Menu */
+}
+
+.faber_horizontal_menu ul li a:hover{
+    background: black; /* Warna Background Menu Utama ketika di Mouse Over */
+    color: white; /* Warna Font Menu Utama ketika di Mouse Over */
+}
+	
+.faber_horizontal_menu ul li ul{
+    position: absolute;
+    left: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.faber_horizontal_menu ul li ul li{
+    display: list-item;
+    float: none;
+}
+
+.faber_horizontal_menu ul li ul li ul{
+    top: 0;
+}
+
+.faber_horizontal_menu ul li ul li a{
+    font: normal 13px Verdana;
+    width: 160px; /*Lebar Area Sub Menu*/
+    padding: 5px;
+    margin: 0;
+    border-top-width: 0;
+    border-bottom: 1px solid white; /* Warna Border Pemisah antar Sub Menu */
+}
+
+.faber_horizontal_menu ul li ul li a:hover{ 
+    background: #000;  /* Warna Background Sub Menu ketika di Mouse Over */
+    color: #FFF;  /* Warna Font Sub Menu ketika di Mouse Over */
+}
+

@@ -1,0 +1,59 @@
+.faber_vertical_menu {
+    width:280px;  //*** Lebar Menu Utama **/
+}
+
+.faber_vertical_menu h3{
+    font: bold 14px Verdana; 
+    color: white; 
+    background: #606060; //*** Warna Background Judul Category Menu Jika Ada */
+    text-transform: uppercase;
+    padding: 10px 10 10px 10px;
+    margin:0px;
+}
+
+.faber_vertical_menu_div ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #ccc;
+}
+	
+.faber_vertical_menu_div ul li{
+    background: #fbbfbf; /*** Warna Background Menu Utama */
+    position: relative;
+}
+
+.faber_vertical_menu_div ul li ul li{
+    background: #c6fbbf; /*** Warna Background Sub Menu */
+}
+	
+.faber_vertical_menu_div ul li ul{
+    width: 180px;   /*** Lebar Sub Menu ***/
+    position: absolute;
+    top: 0;
+    z-index:1;
+    visibility: hidden;
+}
+
+.faber_vertical_menu_div ul li a{
+    display: block;
+    overflow: auto; /*force hasLayout in IE7 */
+    color: black;
+    text-decoration: none;
+    font: normal 14px Arial;
+    line-height: 20px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #ccc;
+}
+
+.faber_vertical_menu_div ul li a:hover {
+    background: #000000; /** Background ketika di mouseover **/
+    color : #ffffff; /** Warna Tulisan ketika di mouseover **/
+    text-decoration: none;
+}
+
+	
+/* Holly Hack for IE \*/
+* html .faber_vertical_menu_div ul li { float: left; height: 1%; }
+* html .faber_vertical_menu_div ul li a { height: 1%; }
+/* End */

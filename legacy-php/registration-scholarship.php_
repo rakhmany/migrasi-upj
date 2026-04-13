@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Universitas Pembangunan Jaya" /> 
+<meta name="copyright" content="upj.ac.id" /> 
+<meta name="creator" content="Universitas Pembangunan Jaya" />
+<meta name="description" content="UPJ hadir untuk menciptakan sarjana yang mampu mengatasi segala bentuk tantangan dalam masyarakat dan giat berperan serta menyumbangkan pemikiran ke lingkungan " /> 
+<meta name="keywords" content="Universitas Pembangunan Jaya di Bintaro tangerang" />
+<link rel="icon" type="image/png" href="images/favicon.png">
+<!-- Document title -->
+<title>Scholarship | Universitas Pembangunan Jaya</title>
+<!-- Stylesheets & Fonts -->
+<link href="css/plugins.css" rel="stylesheet">
+<link href="css/master.css" el="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="body-inner">
+         <!-- Header -->
+         <?php include ("header.php")?>
+         <!--  Header -->
+
+        <!-- Breadcumb -->
+        <section id="page-title" class="text-light" style="background-image:url(images/defaultbanner.jpeg); ">
+            <div class="container">
+            </div>
+        </section>
+        <section class="p-0">
+            <div class="container">
+                <div class="row">
+                    <div class="breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li><a href="index.php"><i class="fa fa-home"></i></a> </li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Registration</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Scholarship </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcumb -->   
+
+        <section id="page-content">
+            <div class="container">
+                <h2>Scholarship</h2>
+                <div class="row">
+                    <div class="col-lg-12 content">
+                        <p><strong style="font-family: verdana, geneva, sans-serif; font-size: 16px;">Beasiswa Jaya 100 %</strong></p>
+                        <p style="text-align: justify;"><span style="font-size:16px;"><strong><a href="https://docs.google.com/forms/d/15ome_ouXSRZVz5yCsIQZACiE5ZOn-DRHFUzIdru4JpI/viewform?ts=615ed207&amp;edit_requested=true" style="color: red" target="_blank">Klik di sini untuk memulai test</a></strong></span></p>
+                        <ol style="list-style-type: upper-alpha;">
+                             <li><span style="font-size: 16px;">
+                                <span style="font-family: verdana, geneva, sans-serif;">Potongan Rata-Rata Rapor</span></span>
+                            </li> 
+                        </ol>
+                        <table border="0" cellpadding="0" cellspacing="0"> 
+                            <tbody> 
+                                <tr> 
+                                    <td style="width: 228px; height: 32px;"> 
+                                        <p align="center"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Jenis Potongan</strong></span></span></p> 
+                                    </td> 
+                                    <td rowspan="6" style="width: 24px; height: 32px;"> 
+                                        <p>&nbsp;</p> 
+                                    </td> 
+                                    <td style="width: 267px; height: 32px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Total Biaya</strong></span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 228px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rata-rata Rapor &gt; 9,01</span></span></p> 
+                                    </td> 
+                                    <td style="width: 267px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 5.900.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 228px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rata-rata Rapor 8,51 – 9,00</span></span></p> 
+                                    </td> 
+                                    <td style="width: 267px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 11.800.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 228px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rata-rata Rapor 8,01 – 8,50</span></span></p> 
+                                    </td> 
+                                    <td style="width: 267px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 16.225.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 228px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rata-rata Rapor 7,51 – 8,00</span></span></p> 
+                                    </td> 
+                                    <td style="width: 267px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 17.700.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 228px;"> 
+                                        <p>&nbsp;</p> 
+                                    </td> 
+                                    <td style="width: 267px;">&nbsp;</td> 
+                                </tr> 
+                            </tbody> 
+                        </table>
+                        <p></p>
+                        <ol > 
+                            <li value="2"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Beasiswa Peringkat Rapor</span></span></li> 
+                        </ol>
+                        <table border="0" cellpadding="0" cellspacing="0"> 
+                            <tbody> 
+                                <tr> 
+                                    <td style="width: 180px; height: 32px;"> 
+                                        <p align="center"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Jenis Beasiswa</strong></span></span></p> 
+                                    </td> 
+                                    <td rowspan="3" style="width: 18px; height: 32px;"> 
+                                        <p>&nbsp;</p> 
+                                    </td> 
+                                    <td style="width: 237px; height: 32px;"> 
+                                        <p style="margin-left: -5.4pt;"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Total Biaya</strong></span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 180px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Peringkat Kelas 1-5</span></span></p> 
+                                    </td> 
+                                    <td style="width: 237px;"> 
+                                        <p style="margin-left: -5.4pt;"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 7.375.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 180px;"> <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Peringkat Kelas 6-10</span></span></p> 
+                                    </td> 
+                                    <td style="width: 237px;"> <p style="margin-left: -5.4pt;"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 10.325.000,-</span></span></p>
+                                    </td> 
+                                </tr> 
+                            </tbody> 
+                        </table>
+                        <p></p>
+                        <ol>
+                            <li value="3"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Beasiswa Ujian Saringan Masuk</span></span></li> 
+                        </ol>
+                        <table border="0" cellpadding="0" cellspacing="0"> 
+                            <tbody> 
+                                <tr> 
+                                    <td style="width: 180px; height: 32px;"> 
+                                        <p align="center"><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Jenis Beasiswa</strong></span></span></p> 
+                                    </td> 
+                                    <td rowspan="4" style="width: 18px; height: 32px;"> 
+                                        <p>&nbsp;</p> 
+                                    </td> 
+                                    <td style="width: 237px; height: 32px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Total Biaya</strong></span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 180px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">USM Grade A</span></span></p> 
+                                    </td> 
+                                    <td style="width: 237px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 0,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 180px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">USM Grade B</span></span></p> 
+                                    </td> 
+                                    <td style="width: 237px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 11.800.000,-</span></span></p> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td style="width: 180px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">USM Grade C</span></span></p> 
+                                    </td> 
+                                    <td style="width: 237px;"> 
+                                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Rp 17.700.000,-</span></span></p> 
+                                    </td>
+                                </tr> 
+                            </tbody> 
+                        </table>
+                        <p></p>
+                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Beasiswa Rekanan Jaya</strong></span></span></p>
+                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Sebagai wujud nyata kepedulian industri kepada kualitas pendidikan khususnya kualitas SDM Indonesia, maka rekanan Unit Usaha Pembangunan Jaya Group memberikan bantuan beasiswa kepada mahasiswa Universitas Pembangunan Jaya. Diberikan kepada mahasiswa:</span></span></p>
+                        <ul> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Jenjang S1 Semester III s.d. VII (Tidak sedang menjalani cuti kuliah).</span></span>
+                            </li> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Memiliki IPK &gt; 3,00</span></span></li> 
+                        </ul>
+                        <p></p>
+                        <p><strong style="font-family: verdana, geneva, sans-serif; font-size: 16px;">Beasiswa KIP Kuliah</strong></p>
+                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Beasiswa 100% &nbsp;uang pangkal, SPP dan SKS yang diberikan kepada calon mahasiswa yang berprestasi baik dan ingin melanjutkan ke pendidikan tinggi, namun kurang mampu dalam hal keuangan.&nbsp;</span></span><span style="font-family: verdana, geneva, sans-serif; font-size: 16px;">Persyaratan Beasiswa KIP Kuliah</span><span style="font-family: verdana, geneva, sans-serif; font-size: 16px;">:</span></p>
+                        <ul> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Diberikan kepada siswa SMA/ SMK/ MA atau bentuk lain yang sederajat yang akan lulus pada tahun 2023.&nbsp;</span></span>
+                            </li> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Usia paling tinggi saat mendaftar adalah 21 tahun.</span></span></li> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Berasal dari keluarga kurang mampu dalam keuangan.</span></span></li> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Memiliki potensi akademik baik berdasarkan rekomendasi obyektif dan akurat dari Kepala Sekolah.</span></span></li> 
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Memiliki keinginan kuat dalam melanjutkan pendidikan di jenjang S1 di Universitas Pembangunan Jaya.</span></span></li>
+                            <li><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Lulus Ujian Saringan Masuk ( USM ) dan wawancara Universitas Pembangunan Jaya.</span></span></li> 
+                        </ul>
+                        <p></p>
+                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;"><strong>Beasiswa Ayo Sekolah Ayo Kuliah (ASAK)</strong></span></span></p>
+                        <p><span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Potongan dan Beasiswa Uang Masuk dan biaya per semester yang tergabung dalam Program Beasiswa ASAK Keuskupan Agung Jakarta. Ketentuannya:</span></span></p>
+                        <ul> 
+                            <li>
+                                <font face="verdana, geneva, sans-serif"><span style="font-size: 16px;">Diberikan kepada siswa/i SMA/K/Sederajat yang lulus pada tahun 2023</span></font>
+                            </li> 
+                            <li>
+                                <span style="font-size: 16px;"><span style="font-family: verdana, geneva, sans-serif;">Penerima Beasiswa wajib mempertahankan Indeks Prestasi Semester (IPS) minimal 3,00</span></span>
+                            </li> 
+                            <li><span style="font-size: 16px;">
+                                <span style="font-family: verdana, geneva, sans-serif;">Berlaku untuk masa studi normal maksimal 8 semester.</span></span>
+                            </li> 
+                            <li><span style="font-size: 16px;">
+                                <span style="font-family: verdana, geneva, sans-serif;">Tergabung dalam Program Beasiswa ASAK Keuskupan Agung Jakarta</span></span>
+                            </li> 
+                        </ul>
+                        <p></p>
+                        <img alt="" src="images/DP%20SIDE%20B.png" style="width: 360px;">
+                        <img alt="" src="images/21%401000x.png" style="width: 360px; ">
+                        <img alt="" src="images/Artboard%201%401000x.png" style="width: 360px;">
+                        <img alt="" src="images/Artboard%201.jpeg" style="width: 820px; height: 700px;">
+                        <p>
+                            <img alt="" src="images/Artboard 2.jpeg" style="width: 848px; height: 1200px;">
+                            <img alt="" src="images/Artboard%201222.jpeg" style="width: 848px; height: 1200px;">
+                            <img alt="" src="images/Artboard%201222222.jpeg" style="width: 800px; height: 881px;">
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section> 
+
+
+        <!-- Footer -->
+         <?php include ("footer.php")?>
+        <!--  Footer -->
+        </div>
+        
+        <!--  Body Inner -->
+        <!-- Scroll top -->
+        <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+        <!--Plugins-->
+        <script src="js/jquery.js"></script>
+        <script src="js/plugins.js"></script>
+        <!--Template functions-->
+        <script src="js/functions.js"></script>
+</body>
+
+</html>

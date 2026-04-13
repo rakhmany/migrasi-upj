@@ -1,0 +1,38 @@
+{
+  "name": "faberhost/dropshipaja",
+  "description": "dropshipaja",
+  "minimum-stability": "stable",
+  "license": "Commercial",
+  "authors": [
+    {
+      "name": "Bambang Riswanto",
+      "email": "bamz3r@gmail.com"
+    }
+  ],
+  "require": {
+    "smarty/smarty": "3.1.31",
+    "aferrandini/phpqrcode": "1.0.1",
+    "verot/class.upload.php": "0.33.0",
+    "phpoffice/phpexcel": "1.8.1",
+    "phpmailer/phpmailer": "5.2.22",
+    "symfony/http-foundation": "2.8.17",
+    "symfony/http-kernel": "2.8.17",
+    "symfony/routing": "2.8.17",
+    "symfony/security-core": "2.8.17",
+    "symfony/security-csrf": "2.8.17",
+    "illuminate/database": "5.0.x-dev",
+    "illuminate/pagination": "5.0.x-dev",
+    "illuminate/events": "5.0.x-dev",
+    "respect/validation": "1.1.10",
+    "adodb/adodb-php": "5.20"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Fh\\": "fh",
+      "Api\\": "api",
+      "Web\\": "web"
+    }
+  }
+}

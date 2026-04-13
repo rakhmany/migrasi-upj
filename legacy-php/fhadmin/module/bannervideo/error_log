@@ -1,0 +1,30 @@
+[12-Oct-2023 04:01:56 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[12-Oct-2023 04:01:57 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[12-Oct-2023 05:41:42 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[12-Oct-2023 05:41:43 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 02:37:12 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 02:37:13 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:11:19 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:11:20 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:32:49 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:32:49 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:33:12 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:33:14 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:34:57 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:34:58 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:34:58 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:34:59 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:29 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:30 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:34 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:34 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:36 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:36 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:37 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:37 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:48 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:48 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:54 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[13-Oct-2023 07:35:55 UTC] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in /home/upeje/public_html/fhadmin/include/functions.inc.php on line 306
+[26-Apr-2024 02:28:51 UTC] PHP Fatal error:  Call to undefined function var_dum() in /home/upeje/public_html/fhadmin/module/bannervideo/bannervideo.php on line 256
+[26-Apr-2024 02:29:01 UTC] PHP Fatal error:  Call to undefined function var_dum() in /home/upeje/public_html/fhadmin/module/bannervideo/bannervideo.php on line 256

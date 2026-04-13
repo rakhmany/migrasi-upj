@@ -1,0 +1,25 @@
+FaberCMS
+
+Changelog by Bambang Riswanto 2013/2014
+
+1. Sub Level Akses pada usergroup
+	- Add Edit Delete
+	- Penggunaan
+		- $access_level_type = access_level_type($fh_usergroupid, $db);
+		- if (!$access_level_type->edit) akses_level_die();
+		- akan muncul pesan akses ditutup jika belum punya akses saat melakukan aksi add, edit atau delete
+
+2. Statis Page dan menu front end dipisah
+	- Ketentuan:
+		- Harus buat page statis lebih dulu jika ingin membuat menu front end berbasis page statis
+		- Bisa membuat menu dengan custom link, seperti untuk link ke module
+		- Ada kategori yang bisa di-centang saat membuat page statis menu atas, utama dan bawah
+
+3. Ada 2 skin tambahan untuk tampilan menu utama pada halaman fhadmin
+	- V2: Slide menu dengan halaman utama pada iframe
+	- V3: Searchable Side menu dengan halaman utama pada frameset
+
+4. Basic Config:
+	- Notifikasi Email
+	- Social Link: Facebook, Twitter, Google+ , BLogger, Toutube, Vimeo
+	- Social Widget: Facebook likebox, Twitter Tweetbox

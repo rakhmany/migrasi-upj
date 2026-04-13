@@ -1,0 +1,27 @@
+<html>
+<body>
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery.berslug.js"></script>
+<script>
+
+$(document).ready(function(){
+    $('#title').berSlug({
+        slug: $('#slug')
+    });
+});
+
+</script>
+<form action="#">
+    <dl>
+        <dt><label for="title">Title</label></dt>
+        <dd><input type="text" name="title" value="" id="title" size="50" /></dd>
+
+        <dt><label for="slug">Slug</label></dt>
+        <dd><input type="text" name="slug" value="" id="slug" size="50" readonly /></dd>
+
+        <dt></dt>
+        <dd><input type="submit" name="btn_submit" value="Submit" id="btn_submit" /></dd>
+    </dl>
+</form>
+</body>
+</html>
